@@ -25,6 +25,7 @@
 - **Status:** in progress
 - The root currently contains both monorepo files and all client files. The client CMake preset's `${sourceDir}`-relative build directory supports an intact move to `client/`. The uninitialized LVGL gitlink will be moved in Git's index from `third_party/lvgl` to `client/third_party/lvgl` without fetching the submodule.
 - Moved all 24 tracked client files/paths to `client/`, updated `.gitmodules` to `client/third_party/lvgl`, and refreshed the root README. `cmake --list-presets` works from `client/`; Git detects the content changes as 100% renames and the gitlink retains the pinned LVGL commit.
+- Committed and pushed `e68a495 Organize client under dedicated directory` to `origin/main`.
 
 ## Session: 2026-09-08
 
