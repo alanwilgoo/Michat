@@ -1,0 +1,22 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "native-wsl-gcc-debug",
+      "displayName": "Native WSL GCC Debug",
+      "description": "Build the SDL2 desktop simulator with WSL's x86_64 GCC.",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "/usr/bin/gcc",
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "native-wsl-gcc-debug",
+      "configurePreset": "native-wsl-gcc-debug"
+    }
+  ]
+}

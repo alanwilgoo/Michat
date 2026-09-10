@@ -1,0 +1,9 @@
+# Local build output
+build/
+
+# Editor settings
+.vscode/
+
+# Logs and local secrets
+*.log
+.env
