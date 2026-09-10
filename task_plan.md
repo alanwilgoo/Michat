@@ -11,7 +11,7 @@ Remove the registration-page attachment wording, make its layout usable, make re
 - Do not make broad chat-module refactors to add authentication.
 
 ## Next Step
-Initialize the pinned LVGL submodule locally when network transfer is convenient; server repository integration is complete.
+Initialize the LVGL submodule locally when network transfer is convenient; the client/server monorepo layout is complete.
 
 ## Current Phase
 Phase 21: Git Repository Slimming
@@ -32,6 +32,13 @@ Phase 21: Git Repository Slimming
 - [x] Move the default account-data location to ignored project-local runtime data, with an environment override.
 - [x] Build the new server target and verify ignored credentials/binaries before committing.
 - [x] Commit and push only the server and repository-documentation changes.
+- **Status:** complete
+
+### Phase 23: Client Directory Layout
+- [x] Move all versioned client source, assets, CMake configuration, and client documentation into `client/`.
+- [x] Move the LVGL gitlink to `client/third_party/lvgl` and update `.gitmodules`.
+- [x] Update the root README for the new monorepo layout.
+- [x] Verify the CMake preset and Git tree, then commit and push the organization-only change.
 - **Status:** complete
 
 ### Phase 15: Project Directory Reorganization

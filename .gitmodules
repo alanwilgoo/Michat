@@ -1,4 +1,4 @@
-[submodule "third_party/lvgl"]
-	path = third_party/lvgl
+[submodule "client/third_party/lvgl"]
+	path = client/third_party/lvgl
 	url = https://github.com/lvgl/lvgl.git
 	branch = v9.2.2

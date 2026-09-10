@@ -20,6 +20,12 @@
 - Final verification: `make` produced `server/build/michat-server`, a timed run announced port 10005, and both the binary and `server/data/users.txt` matched the server-local ignore rules. The root README now documents the client/server/submodule layout.
 - Committed and pushed `38ce980 Add versioned server subproject` to `origin/main`. Only source, build instructions, documentation, and an empty runtime-data placeholder were included; the external `/home/alan/miser` deployment remains unchanged.
 
+## Session: 2026-09-10 — Client directory layout
+
+- **Status:** in progress
+- The root currently contains both monorepo files and all client files. The client CMake preset's `${sourceDir}`-relative build directory supports an intact move to `client/`. The uninitialized LVGL gitlink will be moved in Git's index from `third_party/lvgl` to `client/third_party/lvgl` without fetching the submodule.
+- Moved all 24 tracked client files/paths to `client/`, updated `.gitmodules` to `client/third_party/lvgl`, and refreshed the root README. `cmake --list-presets` works from `client/`; Git detects the content changes as 100% renames and the gitlink retains the pinned LVGL commit.
+
 ## Session: 2026-09-08
 
 ### Phase 1: Discovery
