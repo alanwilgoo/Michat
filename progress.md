@@ -18,6 +18,7 @@
 - The current server source uses a hard-coded account path. The repository subproject will use ignored `server/data/users.txt` by default and `CHAT_USERS_FILE` for an explicit deployment path, leaving the running external service untouched.
 - The Makefile builds `build/michat-server` successfully with warning flags. A bounded username copy was corrected so the build is warning-free. The first test cleanup command lost its background PID during command transport; no test process remained.
 - Final verification: `make` produced `server/build/michat-server`, a timed run announced port 10005, and both the binary and `server/data/users.txt` matched the server-local ignore rules. The root README now documents the client/server/submodule layout.
+- Committed and pushed `38ce980 Add versioned server subproject` to `origin/main`. Only source, build instructions, documentation, and an empty runtime-data placeholder were included; the external `/home/alan/miser` deployment remains unchanged.
 
 ## Session: 2026-09-08
 

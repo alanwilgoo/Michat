@@ -11,7 +11,7 @@ Remove the registration-page attachment wording, make its layout usable, make re
 - Do not make broad chat-module refactors to add authentication.
 
 ## Next Step
-Commit and push the verified `server/` subproject while preserving unrelated local client changes.
+Initialize the pinned LVGL submodule locally when network transfer is convenient; server repository integration is complete.
 
 ## Current Phase
 Phase 21: Git Repository Slimming
@@ -31,8 +31,8 @@ Phase 21: Git Repository Slimming
 - [x] Add a reproducible build entry point and document configuration/run steps.
 - [x] Move the default account-data location to ignored project-local runtime data, with an environment override.
 - [x] Build the new server target and verify ignored credentials/binaries before committing.
-- [ ] Commit and push only the server and repository-documentation changes.
-- **Status:** in progress
+- [x] Commit and push only the server and repository-documentation changes.
+- **Status:** complete
 
 ### Phase 15: Project Directory Reorganization
 - [x] Move the server project to the independent `/home/alan/miser` directory while preserving server data.
