@@ -7,3 +7,8 @@ build/
 # Logs and local secrets
 *.log
 .env
+
+# Local agent planning notes
+findings.md
+progress.md
+task_plan.md
