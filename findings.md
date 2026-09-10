@@ -90,6 +90,8 @@
 | Replace bundled LVGL with a pinned Git submodule | The initial repository tracked 2,773 LVGL files out of 2,801 total and was about 69.5 MiB in Git objects; a submodule preserves reproducible source while keeping the application repository small. |
 | Rewrite uploaded initial history only with confirmation | The terminal push completed after the screenshot, so `origin/main` already contains the large first commit. A force-push is now needed to replace it. |
 | Use `--force-with-lease` for the slimming rewrite | It replaced only the exact observed remote tip `75792b2`; GitHub accepted the new lightweight root `073bb16`. |
+| Add the server as a source-only subproject | `/home/alan/miser` contains three source files plus executables, an account database, a log, and a test image. Only `server.c`, `list.c`, and `list.h` belong in Git; the live deployment will remain untouched. |
+| Make account storage configurable and ignored | The old service hard-codes `/home/alan/miser/users.txt`; the repository version should default to `server/data/users.txt`, ignored by Git, and accept `CHAT_USERS_FILE` for deployment. |
 
 ## Issues Encountered
 | Issue | Resolution |

@@ -11,7 +11,7 @@ Remove the registration-page attachment wording, make its layout usable, make re
 - Do not make broad chat-module refactors to add authentication.
 
 ## Next Step
-Initialize the pinned LVGL submodule locally when network transfer is convenient; the remote slimming rewrite is complete.
+Commit and push the verified `server/` subproject while preserving unrelated local client changes.
 
 ## Current Phase
 Phase 21: Git Repository Slimming
@@ -24,6 +24,14 @@ Phase 21: Git Repository Slimming
 - [x] Rewrite the uploaded initial history and force-push the smaller first upload safely.
 - [x] Verify the remote tree contains 30 tracked entries, with LVGL recorded as the pinned `v9.2.2` gitlink.
 - [ ] Initialize the submodule locally and rebuild when the public LVGL clone completes.
+- **Status:** in progress
+
+### Phase 22: Versioned Server Subproject
+- [x] Copy only server source into a new repository `server/` subproject, preserving the running `/home/alan/miser` deployment.
+- [x] Add a reproducible build entry point and document configuration/run steps.
+- [x] Move the default account-data location to ignored project-local runtime data, with an environment override.
+- [x] Build the new server target and verify ignored credentials/binaries before committing.
+- [ ] Commit and push only the server and repository-documentation changes.
 - **Status:** in progress
 
 ### Phase 15: Project Directory Reorganization
@@ -183,3 +191,4 @@ Phase 21: Git Repository Slimming
 | Isolated auth callback assertion | 3 | The separately launched temporary server exited before a stable client run; switch to a single-shell server/client harness with captured logs. |
 | Strict standalone UI check warnings | 1 | The temporary test included pre-existing `frontend.c` unused-code warnings; reran the same UI check without converting unrelated warnings to errors. |
 | Server restart script port-filter syntax | 1 | A Windows line-ending issue stopped the scripted health check after the old server exited; immediately started the rebuilt binary with a simpler command and verified it listens on port 10000 (PID 22630). |
+| Server test-process cleanup | 1 | The host command transport stripped the background PID variable. The shell exited and no test server remained; use a foreground, line-buffered timeout check instead. |

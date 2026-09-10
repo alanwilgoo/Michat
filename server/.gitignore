@@ -1,0 +1,7 @@
+# Build output and runtime data
+build/
+data/users.txt
+log
+
+# Local test assets
+emoji_*

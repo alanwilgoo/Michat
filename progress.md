@@ -11,6 +11,14 @@
 - A new root commit `073bb16` was created with 30 tracked entries and force-pushed with an exact lease. GitHub accepted `75792b2...073bb16 slim-main -> main (forced update)`, so the oversized tree is absent from remote `main` history.
 - The source directory remains usable after `git submodule update --init --recursive`; the local submodule working tree is intentionally absent until that public dependency clone is run.
 
+## Session: 2026-09-10 — Server repository integration
+
+- **Status:** in progress
+- Inspected `/home/alan/miser`: source files are `server.c`, `list.c`, and `list.h`; executables, `users.txt`, `log`, and `emoji_1` are runtime/generated data and will not be copied into the repository.
+- The current server source uses a hard-coded account path. The repository subproject will use ignored `server/data/users.txt` by default and `CHAT_USERS_FILE` for an explicit deployment path, leaving the running external service untouched.
+- The Makefile builds `build/michat-server` successfully with warning flags. A bounded username copy was corrected so the build is warning-free. The first test cleanup command lost its background PID during command transport; no test process remained.
+- Final verification: `make` produced `server/build/michat-server`, a timed run announced port 10005, and both the binary and `server/data/users.txt` matched the server-local ignore rules. The root README now documents the client/server/submodule layout.
+
 ## Session: 2026-09-08
 
 ### Phase 1: Discovery
